@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="300" viewBox="0 0 1200 300" role="img" aria-label="llama-kb — local bilingual RAG for llama.cpp">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0d1117"/>
+      <stop offset="100%" stop-color="#111827"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#2dd4bf"/>
+      <stop offset="100%" stop-color="#60a5fa"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="300" rx="18" fill="url(#bg)"/>
+  <g stroke="#30363d" stroke-width="1" opacity="0.6">
+    <path d="M0 60 H1200 M0 240 H1200"/>
+    <path d="M60 0 V300 M1140 0 V300"/>
+  </g>
+  <g font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono', monospace">
+    <text x="72" y="104" font-size="20" fill="#8b949e" letter-spacing="4">SELF-HOSTED · BILINGUAL · GROUNDED</text>
+    <text x="66" y="184" font-size="82" font-weight="700" fill="url(#accent)">llama<tspan fill="#e6edf3">-kb</tspan></text>
+    <text x="72" y="228" font-size="20" fill="#c9d1d9">Local RAG for llama.cpp — hybrid retrieval and group routing,</text>
+    <text x="72" y="258" font-size="20" fill="#c9d1d9">with an OpenAI-compatible API.</text>
+  </g>
+  <g font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono', monospace" font-size="15">
+    <g transform="translate(902 72)">
+      <rect width="250" height="36" rx="18" fill="#161b22" stroke="#2dd4bf" stroke-opacity="0.55"/>
+      <text x="18" y="23" fill="#2dd4bf">dense + FTS5 hybrid</text>
+    </g>
+    <g transform="translate(882 120)">
+      <rect width="270" height="36" rx="18" fill="#161b22" stroke="#60a5fa" stroke-opacity="0.55"/>
+      <text x="18" y="23" fill="#60a5fa">cross-lingual retrieval</text>
+    </g>
+    <g transform="translate(832 168)">
+      <rect width="320" height="36" rx="18" fill="#161b22" stroke="#f59e0b" stroke-opacity="0.55"/>
+      <text x="18" y="23" fill="#f59e0b">catalog-driven group routing</text>
+    </g>
+  </g>
+</svg>

@@ -1,0 +1,70 @@
+{
+  "version": 1,
+  "name": "llama-kb-demo",
+  "default_group": {
+    "id": "general",
+    "name": "General",
+    "type": "general",
+    "version": "",
+    "parent": "",
+    "preferred": true,
+    "sources": [],
+    "aliases": ["general", "docs", "其他资料"],
+    "description": "Documents that do not belong to any other group",
+    "embed_prefix": ""
+  },
+  "groups": [
+    {
+      "id": "product",
+      "name": "Nimbus Assistant",
+      "type": "product",
+      "version": "",
+      "parent": "",
+      "preferred": true,
+      "sources": ["product-manual.md", "api-reference.md"],
+      "aliases": [
+        "Nimbus",
+        "Nimbus Assistant",
+        "product manual",
+        "API reference",
+        "产品手册",
+        "接口说明"
+      ],
+      "description": "Product manual and HTTP API reference for Nimbus Assistant",
+      "embed_prefix": "Nimbus Assistant"
+    },
+    {
+      "id": "ops",
+      "name": "Operations Runbooks",
+      "type": "knowledge_base",
+      "version": "",
+      "parent": "",
+      "preferred": true,
+      "sources": ["gateway-runbook.md", "aurora-operations.md"],
+      "aliases": [
+        "ops",
+        "operations",
+        "runbook",
+        "gateway",
+        "AuroraDB",
+        "运维",
+        "网关"
+      ],
+      "description": "Operations runbooks for the Spark gateway and AuroraDB",
+      "embed_prefix": "Operations Runbooks"
+    }
+  ],
+  "unsupported": [
+    {
+      "name": "Java",
+      "aliases": ["Java", "JVM", "JDK"],
+      "message": "The demo catalog does not include Java documentation."
+    }
+  ],
+  "settings": {
+    "router_min_score": 0.30,
+    "router_scope_min_score": 0.42,
+    "router_max_groups": 3,
+    "router_multi_margin": 0.02
+  }
+}

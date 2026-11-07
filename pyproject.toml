@@ -1,0 +1,68 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "llama-kb"
+version = "0.1.0"
+description = "Local, bilingual RAG for llama.cpp: group-aware hybrid retrieval with an OpenAI-compatible API."
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "MIT" }
+authors = [{ name = "llama-kb contributors" }]
+keywords = [
+    "rag",
+    "retrieval-augmented-generation",
+    "llama.cpp",
+    "local-first",
+    "knowledge-base",
+    "embeddings",
+    "sqlite-fts5",
+    "chromadb",
+    "bilingual",
+    "cross-lingual",
+]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Environment :: Console",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Scientific/Engineering :: Artificial Intelligence",
+    "Topic :: Text Processing :: Indexing",
+]
+dependencies = [
+    "chromadb>=1.0,<2",
+    "sentence-transformers>=3.0",
+    "torch>=2.0",
+    "pypdf>=5.0",
+]
+
+[project.optional-dependencies]
+devdocs = ["beautifulsoup4>=4.12", "markdownify>=0.13"]
+dev = ["beautifulsoup4>=4.12", "markdownify>=0.13"]
+
+[project.scripts]
+llamakb = "llama_kb.cli:main"
+llamakb-server = "llama_kb.server:main"
+llamakb-chat = "llama_kb.chat:main"
+
+[project.urls]
+Homepage = "https://github.com/RDXww/llama-kb"
+Repository = "https://github.com/RDXww/llama-kb"
+Issues = "https://github.com/RDXww/llama-kb/issues"
+
+[tool.setuptools.packages.find]
+include = ["llama_kb*"]
+
+[tool.ruff]
+line-length = 92
+target-version = "py310"
+
+[tool.ruff.lint]
+select = ["E", "F", "I"]
+ignore = ["E501"]
